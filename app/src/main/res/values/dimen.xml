@@ -20,6 +20,7 @@
     <dimen name="minMargin">5dp</dimen>
     <dimen name="maxMargin">10dp</dimen>
 
+    <dimen name="indicatorHeight">50dp</dimen>
 
 
 </resources>

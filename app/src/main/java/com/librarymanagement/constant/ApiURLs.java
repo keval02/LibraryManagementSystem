@@ -6,5 +6,9 @@ package com.librarymanagement.constant;
 
 public class ApiURLs {
 
-    public static final String BASE_URL = "https://stark-spire-93433.herokuapp.com/";
+    public static final String BASE_URL = "http://cabsride.byethost24.com/";
+
+    public static final String LOGIN = "Registration/App_Register";
+    public static final String REGISTER = "Registration/App_Login";
+    public static final String BOOKISSUE = "BookIssue/App_addBook";
 }
