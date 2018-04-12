@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.librarymanagement">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +21,9 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".BookIssueActivity"></activity>
+        <activity android:name=".BookIssueActivity" />
+        <activity android:name=".MaterialLearningActivity" />
+        <activity android:name=".SubjectActivity"></activity>
     </application>
 
 </manifest>

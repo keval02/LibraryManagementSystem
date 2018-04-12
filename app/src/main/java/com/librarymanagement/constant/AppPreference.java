@@ -24,6 +24,10 @@ public class AppPreference {
     boolean login = false;
     boolean filledProfile = false ;
     String userType = "";
+    String userName = "";
+    String bookName = "";
+    String bookType = "";
+    String emailId = "";
 
     public boolean isLogin() {
         return sharedPreferences.getBoolean("isLogin", false);
@@ -53,6 +57,41 @@ public class AppPreference {
         editor.putBoolean("profileFilled" , filledProfile).commit();
     }
 
+    public String getUserName() {
+        return sharedPreferences.getString("username" , "");
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+        editor.putString("username" , userName).commit();
+    }
+
+    public String getBookName() {
+        return sharedPreferences.getString("bookname" , "");
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+        editor.putString("bookname" , bookName).commit();
+    }
+
+    public String getBookType() {
+        return sharedPreferences.getString("booktype" , "");
+    }
+
+    public void setBookType(String bookType) {
+        this.bookType = bookType;
+        editor.putString("booktype" , bookType).commit();
+    }
+
+    public String getEmailId() {
+        return sharedPreferences.getString("emailid" , "");
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+        editor.putString("emailid" , emailId).commit();
+    }
 
     public void clearData(Context context){
         SharedPreferences.Editor prefs = context.getSharedPreferences(FILE_NAME , 0).edit();

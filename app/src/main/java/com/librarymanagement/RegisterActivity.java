@@ -13,7 +13,12 @@ import com.librarymanagement.apis.AdminAPI;
 import com.librarymanagement.apis.ServiceGenerator;
 import com.librarymanagement.constant.AppPreference;
 import com.librarymanagement.constant.Global;
+import com.librarymanagement.helper.CustomProgressDialog;
+import com.librarymanagement.model.LoginModel;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -22,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText edtUserName, edtEmail, edtMobile, edtPassword, edtRetype , edtAddress;
     Button btnRegister;
     AppPreference appPreference;
+    CustomProgressDialog progressDialog;
 
     AdminAPI adminAPI ;
 
@@ -33,6 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         appPreference = new AppPreference(getApplicationContext());
         adminAPI = ServiceGenerator.getAPIClass();
+        progressDialog = new CustomProgressDialog(RegisterActivity.this);
+        progressDialog.setCancelable(false);
 
         fetchIds();
     }
@@ -81,13 +89,41 @@ public class RegisterActivity extends AppCompatActivity {
                     Global.CustomToast(getApplicationContext(), "Retype Password does not Matches With Password");
                 else{
 
+                    progressDialog.show();
+                    Call<LoginModel> loginModelCall = adminAPI.REGISTER_MODEL_CALL(userName , address , emailId, password , mobileNo);
+                    loginModelCall.enqueue(new Callback<LoginModel>() {
+                        @Override
+                        public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
+                            progressDialog.dismiss();
+                            LoginModel model = response.body();
+
+                            if (model != null) {
+                                if (model.isStatus()) {
+                                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    appPreference.setLogin(true);
+                                    appPreference.setUserName(model.getData().getUsername());
+                                    appPreference.setEmailId(model.getData().getEmail());
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Global.CustomToast(getApplicationContext(), model.getMessage());
+                                }
 
 
-                        Intent intent = new Intent(getApplicationContext() , HomeActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        appPreference.setLogin(true);
-                        startActivity(intent);
-                        finish();
+                            } else {
+                                Global.defaultError(getApplicationContext());
+                            }
+
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<LoginModel> call, Throwable t) {
+                            progressDialog.dismiss();
+                            Global.errorToast(getApplicationContext(), t);
+                        }
+                    });
                 }
 
 

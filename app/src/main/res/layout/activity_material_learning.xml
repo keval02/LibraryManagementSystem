@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/activityBack"
+    android:layout_height="match_parent"
+    tools:context="com.librarymanagement.MaterialLearningActivity">
+
+    <include layout="@layout/layout_back_toolbar"/>
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/maxMargin"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/fields"
+        android:textColor="@color/textColorBlack"
+        android:textSize="26sp" />
+
+
+
+
+    <ListView
+        android:id="@+id/list_fields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+
+
+</LinearLayout>
