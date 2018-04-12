@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">LibraryManagement</string>
+
+    <string name="login">Login</string>
+    <string name="signin">Sign in</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="newpassword">New Password</string>
+    <string name="oldpassword">Old Password</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="signup">Create Your Account</string>
+    <string name="reg">Sign Up</string>
+    <string name="register"><u>New here? Register</u></string>
+    <string name="username">Username</string>
+    <string name="address">Address</string>
+    <string name="mobile">Mobile No</string>
+    <string name="retype">Retype Password</string>
+    <string name="bookissue">Book Issue</string>
+    <string name="dob">Select Date</string>
+
+
+
+    // Validation String
+    <string name="emptyEmail">Please Enter Email Id</string>
+    <string name="validEmail">Please Enter Valid Email Id</string>
+    <string name="emptyPassword">Please Enter Password</string>
+    <string name="validPassword">Please Enter Valid Password</string>
+    <string name="emptyMobile">Please Enter Mobile No</string>
+    <string name="validMobile">Please Enter Valid Mobile No</string>
+    <string name="emptyAdd">Please Enter Address</string>
+    <string name="emptyusername">Please Enter Your User Name</string>
+
+
+</resources>

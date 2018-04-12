@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9966</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF9966</color>
+
+    <color name="activityBack">#EDEDED</color>
+    <color name="editTextCard">#FAFAFA</color>
+    <color name="lightGray">#757575</color>
+    <color name="hintColor">#9E9E9E</color>
+    <color name="editTextColor">#212121</color>
+    <color name="toolBarColor">#D3D3D3</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="textColorBlack">#000000</color>
+    <color name="toast">#FF9966</color>
+
+    <color name="fb">#3F51B5</color>
+    <color name="google">#F4511E</color>
+
+</resources>

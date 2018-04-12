@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBack"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/maxMargin"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/bookissue"
+        android:textColor="@color/textColorBlack"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/maxMargin"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/minMargin"
+                app:cardBackgroundColor="@color/editTextCard"
+                app:cardElevation="5dp">
+
+
+                <EditText
+                    android:id="@+id/edt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editText"
+                    android:layout_margin="@dimen/minMargin"
+                    android:background="@color/editTextCard"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:hint="@string/username"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/editTextColor"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/titleText" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/minMargin"
+                app:cardBackgroundColor="@color/editTextCard"
+                app:cardElevation="5dp">
+
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editText"
+                    android:layout_margin="@dimen/minMargin"
+                    android:background="@color/editTextCard"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/editTextColor"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/titleText" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_bookname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/minMargin"
+                app:cardBackgroundColor="@color/editTextCard"
+                app:cardElevation="5dp">
+
+
+                <EditText
+                    android:id="@+id/edt_bookname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editText"
+                    android:layout_margin="@dimen/minMargin"
+                    android:background="@color/editTextCard"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:hint="@string/address"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/editTextColor"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/titleText" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_booktype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/minMargin"
+                app:cardBackgroundColor="@color/editTextCard"
+                app:cardElevation="5dp">
+
+
+                <EditText
+                    android:id="@+id/edt_booktype"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editText"
+                    android:layout_margin="@dimen/minMargin"
+                    android:background="@color/editTextCard"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:hint="@string/address"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/editTextColor"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/titleText" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/minMargin"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="5dp">
+
+
+                <EditText
+                    android:id="@+id/edt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editText"
+                    android:layout_margin="@dimen/minMargin"
+                    android:background="@color/white"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:hint="@string/dob"
+                    android:textColor="@color/editTextColor"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/titleText" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="@dimen/cardHeight"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/minMargin"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="@dimen/maxMargin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="5dp">
+
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/bookissue"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

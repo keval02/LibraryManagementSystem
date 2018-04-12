@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <dimen name="cardelevation">5dp</dimen>
+    <dimen name="cardradius">5dp</dimen>
+
+    <dimen name="titleText">16sp</dimen>
+    <dimen name="title">18sp</dimen>
+
+    <dimen name="textNormal">14sp</dimen>
+
+    <dimen name="editText">35dp</dimen>
+    <dimen name="button">30dp</dimen>
+    <dimen name="cardHeight">40dp</dimen>
+    <dimen name="largeTextBox">100dp</dimen>
+
+    <dimen name="drawablePadding">5dp</dimen>
+    <dimen name="minMargin">5dp</dimen>
+    <dimen name="maxMargin">10dp</dimen>
+
+
+
+</resources>
