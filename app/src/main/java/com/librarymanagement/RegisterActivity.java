@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.librarymanagement.apis.AdminAPI;
+import com.librarymanagement.apis.ServiceGenerator;
 import com.librarymanagement.constant.AppPreference;
 import com.librarymanagement.constant.Global;
 
@@ -21,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button btnRegister;
     AppPreference appPreference;
 
+    AdminAPI adminAPI ;
 
 
     @Override
@@ -29,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         appPreference = new AppPreference(getApplicationContext());
+        adminAPI = ServiceGenerator.getAPIClass();
 
         fetchIds();
     }
@@ -76,6 +80,9 @@ public class RegisterActivity extends AppCompatActivity {
                 else if (!password.matches(retypePassword))
                     Global.CustomToast(getApplicationContext(), "Retype Password does not Matches With Password");
                 else{
+
+
+
                         Intent intent = new Intent(getApplicationContext() , HomeActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         appPreference.setLogin(true);
